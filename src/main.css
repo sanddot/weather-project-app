@@ -19,6 +19,7 @@
 }
 .Main .current-temperature .emoji {
   font-size: 60px;
+  margin-top: 7px;
 }
 .Main .current-temperature .temperature {
   font-size: 80px;
@@ -28,6 +29,28 @@
 .Main .current-temperature .celsius {
   font-size: 25px;
   margin-top: 6px;
+}
+
+.Main .forecast {
+  display: flex;
+  line-height: 25px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.Main .day-of-week {
+  text-align: center;
+  color: rgb(67, 67, 67);
+}
+.Main .day-emoji {
+  display: block;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+}
+.Main .temperature-wrapping {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(34, 30, 119);
 }
 
 @media (max-width: 576px) {
