@@ -32,7 +32,7 @@ export default function Main() {
         </div>
         <div className="current-temperature">
           <div className="emoji">
-            <img src={weatherData.imgUrl} />
+            <img src={weatherData.imgUrl} alt="weather description icon" />
           </div>
           <div className="temperature">{weatherData.temperature}</div>
           <div className="celsius">ºC</div>
@@ -43,7 +43,11 @@ export default function Main() {
         <div className="forecast-day">
           <div className="day-of-week">Mon</div>
           <div>
-            <img src={weatherData.imgUrl} className="day-emoji" />
+            <img
+              src={weatherData.imgUrl}
+              className="day-emoji"
+              alt="weather description icon"
+            />
           </div>
           <div className="temperature-wrapping">
             <div className="day-high-temperature">
@@ -55,7 +59,11 @@ export default function Main() {
         <div className="forecast-day">
           <div className="day-of-week">Tue</div>
           <div>
-            <img src={weatherData.imgUrl} className="day-emoji" />
+            <img
+              src={weatherData.imgUrl}
+              className="day-emoji"
+              alt="weather description icon"
+            />
           </div>
           <div className="temperature-wrapping">
             <div className="day-high-temperature">
@@ -67,7 +75,11 @@ export default function Main() {
         <div className="forecast-day">
           <div className="day-of-week">Wed</div>
           <div>
-            <img src={weatherData.imgUrl} className="day-emoji" />
+            <img
+              src={weatherData.imgUrl}
+              className="day-emoji"
+              alt="weather description icon"
+            />
           </div>
           <div className="temperature-wrapping">
             <div className="day-high-temperature">
@@ -79,7 +91,11 @@ export default function Main() {
         <div className="forecast-day">
           <div className="day-of-week">Thu</div>
           <div>
-            <img src={weatherData.imgUrl} className="day-emoji" />
+            <img
+              src={weatherData.imgUrl}
+              className="day-emoji"
+              alt="weather description icon"
+            />
           </div>
           <div className="temperature-wrapping">
             <div className="day-high-temperature">
@@ -91,7 +107,11 @@ export default function Main() {
         <div className="forecast-day">
           <div className="day-of-week">Fri</div>
           <div>
-            <img src={weatherData.imgUrl} className="day-emoji" />
+            <img
+              src={weatherData.imgUrl}
+              className="day-emoji"
+              alt="weather description icon"
+            />
           </div>
           <div className="temperature-wrapping">
             <div className="day-high-temperature">

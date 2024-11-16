@@ -4,7 +4,6 @@
   align-items: center;
   padding-top: 20px;
 }
-
 .Main .current-city {
   font-size: 48px;
   font-weight: 600;
@@ -24,13 +23,12 @@
 .Main .current-temperature .temperature {
   font-size: 80px;
   line-height: 80px;
-  font-weight: 450;
+  font-weight: 550;
 }
 .Main .current-temperature .celsius {
   font-size: 25px;
   margin-top: 6px;
 }
-
 .Main .forecast {
   display: flex;
   line-height: 25px;
