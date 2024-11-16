@@ -1,0 +1,31 @@
+.Main .current-weather {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.Main .current-city {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 68px;
+  margin: 0;
+}
+.Main .current-weather-details strong {
+  color: rgb(34, 30, 119);
+}
+.Main .current-temperature {
+  display: flex;
+}
+.Main .current-temperature .emoji {
+  font-size: 60px;
+}
+.Main .current-temperature .temperature {
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 450;
+}
+.Main .current-temperature .celsius {
+  font-size: 25px;
+  margin-top: 6px;
+}
