@@ -31,7 +31,9 @@ export default function Main() {
           </div>
         </div>
         <div className="current-temperature">
-          <div className="emoji">☀️</div>
+          <div className="emoji">
+            <img src={weatherData.imgUrl} />
+          </div>
           <div className="temperature">{weatherData.temperature}</div>
           <div className="celsius">ºC</div>
         </div>
