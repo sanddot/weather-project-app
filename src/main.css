@@ -37,8 +37,10 @@
   .Main .current-weather-details {
     font-size: 12px;
   }
+
   .Main .current-temperature .emoji {
-    font-size: 50px;
+    font-size: 35px;
+    align-self: center;
   }
   .Main .current-temperature .temperature {
     font-size: 60px;
@@ -47,6 +49,6 @@
   }
   .Main .current-temperature .celsius {
     font-size: 18px;
-    margin-top: 4px;
+    margin-top: 0;
   }
 }
