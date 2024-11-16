@@ -6,7 +6,7 @@
 }
 
 .Main .current-city {
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 600;
   line-height: 68px;
   margin: 0;
@@ -28,4 +28,25 @@
 .Main .current-temperature .celsius {
   font-size: 25px;
   margin-top: 6px;
+}
+
+@media (max-width: 576px) {
+  .Main .current-city {
+    font-size: 34px;
+  }
+  .Main .current-weather-details {
+    font-size: 12px;
+  }
+  .Main .current-temperature .emoji {
+    font-size: 35px;
+  }
+  .Main .current-temperature .temperature {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+  .Main .current-temperature .celsius {
+    font-size: 18px;
+    margin-top: 0;
+  }
 }

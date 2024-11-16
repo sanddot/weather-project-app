@@ -24,3 +24,11 @@
 .Header .submit-button:hover {
   cursor: pointer;
 }
+@media (max-width: 576px) {
+  .Header .search-input {
+    font-size: 13px;
+  }
+  .Header .submit-button {
+    font-size: 13px;
+  }
+}
