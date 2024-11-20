@@ -9,7 +9,7 @@ function App() {
       <div className="container">
         <div className="weather-app-frame">
           <Header />
-          <Main defaultCity="Paris" />
+          <Main defaultCity="Vancouver" />
           <Footer />
         </div>
       </div>
