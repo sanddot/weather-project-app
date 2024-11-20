@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./main.css";
 import axios from "axios";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -140,6 +141,17 @@ export default function Main(props) {
     let apiKey = "t3f3af9b184481d0306edc82cbo6ff8c";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
-    return "Loading...";
+    return (
+      <ThreeDots
+        visible={true}
+        height="80"
+        width="80"
+        color="blue"
+        radius="9"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+      />
+    );
   }
 }
