@@ -5,7 +5,7 @@
   padding-top: 20px;
 }
 .Main .current-city {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 600;
   line-height: 68px;
   margin: 0;
@@ -15,20 +15,20 @@
 }
 .Main .current-temperature {
   display: flex;
+  align-items: center;
 }
 .Main .current-temperature .emoji {
-  width: 60px;
-  height: 60px;
-  margin-top: 7px;
+  width: 75px;
+  height: 75px;
 }
 .Main .current-temperature .temperature {
-  font-size: 80px;
-  line-height: 80px;
+  font-size: 75px;
+  line-height: 75px;
   font-weight: 550;
 }
 .Main .current-temperature .celsius {
-  font-size: 25px;
-  margin-top: 6px;
+  font-size: 16px;
+  align-self: flex-start;
 }
 .Main .forecast {
   display: flex;
@@ -58,18 +58,5 @@
   }
   .Main .current-weather-details {
     font-size: 12px;
-  }
-
-  .Main .current-temperature .emoji {
-    margin-top: 0;
-  }
-  .Main .current-temperature .temperature {
-    font-size: 60px;
-    line-height: 60px;
-    font-weight: 500;
-  }
-  .Main .current-temperature .celsius {
-    font-size: 18px;
-    margin-top: 0;
   }
 }

@@ -6,10 +6,12 @@ import Footer from "./Footer";
 function App() {
   return (
     <div className="App">
-      <div className="weather-app-frame">
-        <Header />
-        <Main />
-        <Footer />
+      <div className="container">
+        <div className="weather-app-frame">
+          <Header />
+          <Main defaultCity="Paris" />
+          <Footer />
+        </div>
       </div>
     </div>
   );
