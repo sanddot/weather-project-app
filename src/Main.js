@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "bootstrap/dist/css/bootstrap.css";
 import "./main.css";
 import axios from "axios";
@@ -7,6 +7,7 @@ import { ThreeDots } from "react-loader-spinner";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -17,133 +18,44 @@ export default function Main(props) {
       imgUrl: response.data.condition.icon_url,
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
+      city: response.data.city,
     });
+  }
+
+  function search() {
+    let apiKey = "t3f3af9b184481d0306edc82cbo6ff8c";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+  function updateCity(event) {
+    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
     return (
       <div className="Main">
-        <div className="current-weather">
-          <div>
-            <h1 className="current-city">{props.defaultCity}</h1>
-            <div className="current-weather-details">
-              <p>
-                <span>
-                  <FormattedDate date={weatherData.date} />
-                </span>
-                <br />
-                <span className="text-capitalize">
-                  {" "}
-                  {weatherData.description}
-                </span>
-                <br />
-                Humidity: <strong>{weatherData.humidity} %</strong>
-                <br />
-                Wind:
-                <strong> {weatherData.wind} km/h</strong>
-              </p>
-            </div>
-          </div>
-          <div className="current-temperature">
-            <img
-              className="emoji"
-              src={weatherData.imgUrl}
-              alt={weatherData.description}
+        <div className="header">
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              placeholder="Enter a city..."
+              autoFocus="on"
+              className="search-input"
+              onChange={updateCity}
             />
-            <span className="temperature">
-              {Math.round(weatherData.temperature)}
-            </span>
-            <span className="celsius">ºC</span>
-          </div>
+            <input type="submit" value="Search" className="submit-button" />
+          </form>
         </div>
-        <div className="forecast">
-          <div className="forecast-day">
-            <div className="day-of-week">Mon</div>
-            <div>
-              <img
-                src={weatherData.imgUrl}
-                className="day-emoji"
-                alt="weather description icon"
-              />
-            </div>
-            <div className="temperature-wrapping">
-              <div className="day-high-temperature">
-                <strong>20º</strong>
-              </div>
-              <div class="day-low-temperature">5º</div>
-            </div>
-          </div>
-          <div className="forecast-day">
-            <div className="day-of-week">Tue</div>
-            <div>
-              <img
-                src={weatherData.imgUrl}
-                className="day-emoji"
-                alt="weather description icon"
-              />
-            </div>
-            <div className="temperature-wrapping">
-              <div className="day-high-temperature">
-                <strong>21º</strong>
-              </div>
-              <div class="day-low-temperature">2º</div>
-            </div>
-          </div>
-          <div className="forecast-day">
-            <div className="day-of-week">Wed</div>
-            <div>
-              <img
-                src={weatherData.imgUrl}
-                className="day-emoji"
-                alt="weather description icon"
-              />
-            </div>
-            <div className="temperature-wrapping">
-              <div className="day-high-temperature">
-                <strong>17º</strong>
-              </div>
-              <div class="day-low-temperature">0º</div>
-            </div>
-          </div>
-          <div className="forecast-day">
-            <div className="day-of-week">Thu</div>
-            <div>
-              <img
-                src={weatherData.imgUrl}
-                className="day-emoji"
-                alt="weather description icon"
-              />
-            </div>
-            <div className="temperature-wrapping">
-              <div className="day-high-temperature">
-                <strong>22º</strong>
-              </div>
-              <div class="day-low-temperature">3º</div>
-            </div>
-          </div>
-          <div className="forecast-day">
-            <div className="day-of-week">Fri</div>
-            <div>
-              <img
-                src={weatherData.imgUrl}
-                className="day-emoji"
-                alt="weather description icon"
-              />
-            </div>
-            <div className="temperature-wrapping">
-              <div className="day-high-temperature">
-                <strong>25º</strong>
-              </div>
-              <div class="day-low-temperature">7º</div>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
-    let apiKey = "t3f3af9b184481d0306edc82cbo6ff8c";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return (
       <ThreeDots
         visible={true}

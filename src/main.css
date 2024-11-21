@@ -1,3 +1,30 @@
+.Main .header {
+  border-bottom: 1px solid rgba(116, 98, 157, 0.1);
+  padding-bottom: 20px;
+}
+.Main .search-input {
+  width: 70%;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  border: none;
+  background-color: white;
+}
+.Main .submit-button {
+  width: 26%;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  margin-left: 5px;
+  border: none;
+  background-color: white;
+}
+.Main .submit-button:hover {
+  cursor: pointer;
+}
+
 .Main .current-weather {
   display: flex;
   justify-content: space-between;
@@ -58,5 +85,11 @@
   }
   .Main .current-weather-details {
     font-size: 12px;
+  }
+  .Main .search-input {
+    font-size: 13px;
+  }
+  .Main .submit-button {
+    font-size: 13px;
   }
 }

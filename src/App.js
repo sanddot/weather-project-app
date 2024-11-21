@@ -1,5 +1,5 @@
 import "./App.css";
-import Header from "./Header";
+
 import Main from "./Main";
 import Footer from "./Footer";
 
@@ -8,7 +8,6 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="weather-app-frame">
-          <Header />
           <Main defaultCity="Vancouver" />
           <Footer />
         </div>

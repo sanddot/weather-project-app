@@ -7,7 +7,7 @@
 .App .weather-app-frame {
   max-width: 600px;
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   background: linear-gradient(
     109.6deg,
     rgb(204, 228, 247) 11.2%,
@@ -22,8 +22,5 @@
   .App .weather-app-frame {
     margin: 5px;
     font-size: 13px;
-  }
-  .Main .current-city {
-    font-size: 34px;
   }
 }
