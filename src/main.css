@@ -81,7 +81,7 @@
 
 @media (max-width: 576px) {
   .Main .current-city {
-    font-size: 34px;
+    font-size: 28px;
   }
   .Main .current-weather-details {
     font-size: 12px;
@@ -93,12 +93,15 @@
     font-size: 13px;
   }
   .Main .current-temperature .emoji {
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
   }
   .Main .current-temperature .temperature {
-    font-size: 55px;
-    line-height: 55px;
+    font-size: 45px;
+    line-height: 45px;
     font-weight: 550;
+  }
+  .Main .current-temperature .celsius {
+    font-size: 13px;
   }
 }
