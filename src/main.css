@@ -92,4 +92,13 @@
   .Main .submit-button {
     font-size: 13px;
   }
+  .Main .current-temperature .emoji {
+    width: 55px;
+    height: 55px;
+  }
+  .Main .current-temperature .temperature {
+    font-size: 55px;
+    line-height: 55px;
+    font-weight: 550;
+  }
 }
