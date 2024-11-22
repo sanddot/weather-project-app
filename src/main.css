@@ -55,7 +55,9 @@
 }
 .Main .current-temperature .celsius {
   font-size: 16px;
-  align-self: flex-start;
+  position: relative;
+  line-height: 1;
+  top: -36px;
 }
 .Main .forecast {
   display: flex;
@@ -78,7 +80,9 @@
   justify-content: space-between;
   color: rgb(34, 30, 119);
 }
-
+.Main .celsius a {
+  text-decoration: none;
+}
 @media (max-width: 576px) {
   .Main .current-city {
     font-size: 28px;
@@ -103,5 +107,6 @@
   }
   .Main .current-temperature .celsius {
     font-size: 13px;
+    top: -24px;
   }
 }
