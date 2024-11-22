@@ -85,7 +85,7 @@
 }
 @media (max-width: 576px) {
   .Main .current-city {
-    font-size: 28px;
+    font-size: 20px;
   }
   .Main .current-weather-details {
     font-size: 12px;
