@@ -57,7 +57,7 @@
   font-size: 16px;
   position: relative;
   line-height: 1;
-  top: -36px;
+  top: -42px;
 }
 .Main .forecast {
   display: flex;
@@ -107,6 +107,6 @@
   }
   .Main .current-temperature .celsius {
     font-size: 13px;
-    top: -24px;
+    top: -26px;
   }
 }
