@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
               Humidity: <strong>{props.data.humidity} %</strong>
               <br />
               Wind:
-              <strong> {props.data.wind} km/h</strong>
+              <strong> {props.data.wind} m/s</strong>
             </p>
           </div>
         </div>
