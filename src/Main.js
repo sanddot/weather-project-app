@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./main.css";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -52,6 +53,7 @@ export default function Main(props) {
           </form>
         </div>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {

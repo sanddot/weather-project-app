@@ -59,27 +59,7 @@
   line-height: 1;
   top: -42px;
 }
-.Main .forecast {
-  display: flex;
-  line-height: 25px;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.Main .day-of-week {
-  text-align: center;
-  color: rgb(67, 67, 67);
-}
-.Main .day-emoji {
-  display: block;
-  margin: 0 auto;
-  width: 50px;
-  height: 50px;
-}
-.Main .temperature-wrapping {
-  display: flex;
-  justify-content: space-between;
-  color: rgb(34, 30, 119);
-}
+
 .Main .celsius a {
   text-decoration: none;
 }
