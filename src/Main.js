@@ -20,6 +20,7 @@ export default function Main(props) {
       humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
       city: response.data.city,
+      coordinates: response.data.coordinates,
     });
   }
 
@@ -53,22 +54,24 @@ export default function Main(props) {
           </form>
         </div>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
     search();
     return (
-      <ThreeDots
-        visible={true}
-        height="80"
-        width="80"
-        color="blue"
-        radius="9"
-        ariaLabel="three-dots-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-      />
+      <div>
+        <ThreeDots
+          visible={true}
+          height="80"
+          width="80"
+          color="blue"
+          radius="9"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+      </div>
     );
   }
 }

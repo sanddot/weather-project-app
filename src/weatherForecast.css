@@ -8,7 +8,7 @@
   text-align: center;
   color: rgb(67, 67, 67);
 }
-.WeatherForecast .day-emoji {
+.WeatherForecast .forecast-icon {
   display: block;
   margin: 0 auto;
   width: 50px;
