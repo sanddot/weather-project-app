@@ -29,7 +29,7 @@ export default function WeatherForecastDay(props) {
         </div>
         <div className="temperature-wrapping">
           <div className="day-high-temperature">
-            <strong>{dayHighTemperature()}º</strong>
+            <strong>{dayHighTemperature()}º </strong>
           </div>
           <div className="day-low-temperature">{dayLowTemperature()}º</div>
         </div>
