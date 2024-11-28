@@ -15,7 +15,9 @@
   height: 50px;
 }
 .WeatherForecast .temperature-wrapping {
-  display: flex;
-  justify-content: space-between;
   color: rgb(34, 30, 119);
+  text-align: center;
+}
+.WeatherForecast .day-low-temperature {
+  margin-left: 5px;
 }

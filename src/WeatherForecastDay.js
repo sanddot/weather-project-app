@@ -28,10 +28,10 @@ export default function WeatherForecastDay(props) {
           />
         </div>
         <div className="temperature-wrapping">
-          <div className="day-high-temperature">
+          <span className="day-high-temperature">
             <strong>{dayHighTemperature()}º </strong>
-          </div>
-          <div className="day-low-temperature">{dayLowTemperature()}º</div>
+          </span>
+          <span className="day-low-temperature">{dayLowTemperature()}º</span>
         </div>
       </div>
     </div>

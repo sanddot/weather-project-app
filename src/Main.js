@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
 import "bootstrap/dist/css/bootstrap.css";
-import "./main.css";
 import axios from "axios";
-import { ThreeDots } from "react-loader-spinner";
+import "./main.css";
 import WeatherForecast from "./WeatherForecast";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Main(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
